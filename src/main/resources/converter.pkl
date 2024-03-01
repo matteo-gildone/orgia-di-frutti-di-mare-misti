@@ -1,0 +1,9 @@
+import "pkl:json"
+
+fileName = read("env:FILE")
+file = read("file:\(fileName)")
+parsed = new json.Parser {}.parse(file)
+
+output {
+  value = parsed
+}

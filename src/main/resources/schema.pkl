@@ -1,0 +1,69 @@
+module Schema
+$schema: String = "http://json-schema.org/draft-07/schema#"
+$id: String = "https://springernature.com/eds-c-breadcrumbs.schema.json"
+title: String = "Breadcrumbs"
+description: String = "Breadcrumbs component"
+type: TYPE = "object"
+properties {
+  dataTest {
+    type = "string"
+  }
+  dataTrack {
+    type = "boolean"
+  }
+  dataTrackAction {
+    type = "string"
+  }
+  dataTrackCategory {
+    type = "string"
+  }
+  customClassname {
+    type = "string"
+  }
+  contrast {
+    type = "boolean"
+  }
+  icon {
+    type = "string"
+  }
+  breadcrumbs {
+    type = "array"
+    items {
+      type = "object"
+      properties {
+        dataTrackLabel {
+          type = "string"
+        }
+        dataTest {
+          type = "string"
+        }
+        name {
+          type = "string"
+        }
+        id {
+          type = "string"
+        }
+        url {
+          type = "string"
+        }
+        position {
+          type = "string"
+        }
+      }
+      required {
+        "name"
+        "id"
+        "url"
+        "position"
+      }
+    }
+  }
+}
+required {
+  "customClassname"
+  "contrast"
+  "icon"
+  "breadcrumbs"
+}
+
+typealias TYPE = "object"|"array"|"string"|"boolean"
